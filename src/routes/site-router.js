@@ -9,7 +9,10 @@ import { renderTheme } from '../themes/theme-registry.js';
 export async function handleSiteRoute(request, env) {
   const url = new URL(request.url);
   const path = url.pathname;
-
+  
+ if (path === '/api/auth/login') {
+  return await handleLogin(request);
+}
   // /boss and /boss/dashboard - Boss admin
   if (path === '/boss' || path === '/boss/dashboard') {
     return await handleAuth(request, path === '/boss' ? 'login' : 'dashboard');
