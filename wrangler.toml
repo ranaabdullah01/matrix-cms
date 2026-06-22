@@ -13,3 +13,6 @@ SESSION_SECRET = "your-session-secret-here"
 
 [env.production]
 vars = { SESSION_SECRET = "your-session-secret-here" }
+
+[env.staging]
+vars = { SESSION_SECRET = "staging-secret-here" }
