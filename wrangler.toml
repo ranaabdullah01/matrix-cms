@@ -1,0 +1,15 @@
+# wrangler.toml
+name = "matrix-cms"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "matrix-cms-db"
+database_id = "your-database-id-here"
+
+[vars]
+SESSION_SECRET = "your-session-secret-here"
+
+[env.production]
+vars = { SESSION_SECRET = "your-session-secret-here" }
