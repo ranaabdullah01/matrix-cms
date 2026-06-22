@@ -5,9 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "deploy:staging": "wrangler deploy --env staging",
+    "deploy:prod": "wrangler deploy --env production",
+    "preview": "wrangler dev --env staging",
+    "cf-typegen": "wrangler types",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write 'src/**/*.js'"
   },
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^3.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
   }
 }
